@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>JSDoc: Class: fb</title>
+	
+	<script src="http://shjs.sourceforge.net/sh_main.min.js"> </script>
+    <script src="http://shjs.sourceforge.net/lang/sh_javascript.min.js"> </script>
+    
+    <link type="text/css" rel="stylesheet" href="styles/node-dark.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    
+    <h1 class="page-title">Class: fb</h1>
+    
+    
+    
+    <section>
+     
+    <header>
+        <h2><span class="ancestors"><a href="global.html#LBI">LBI</a>.</span>fb</h2>
+        
+    </header>  
+    
+    <article>
+        <div class="container-overview">
+        <dt>
+    <h4 class="name" id="fb"><span class="type-signature"></span>new fb</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <p class="description">
+        Bridge to the new Facebook SDK with oauth 2, that loads the SDK asyncronously, 
+creates the FaceBook DOM root element and defaults to auto grow the application iframe
+    </p>
+    
+    
+    
+    
+    
+    
+    <dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	<dt class="tag-author">Author:</dt>
+	<dd class="tag-author">
+        <ul><li>Noah Laux (noah.laux@lbi.com)</li></ul>
+	</dd>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source"><ul class="dummy"><li>/Applications/MAMP/htdocs/Modules/assets/js/LBI/LBI.fb.js, line 1</li></ul></dd>
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    
+    <h5>Examples</h5>
+    <pre class="sh_javascript"><code>// Initiate with apikey (mandatory)
+LBI.fb.init({ apiKey: '281411815254963' })</code></pre>
+
+    <pre class="sh_javascript"><code>// Initiate and check if user likes a page
+LBI.fb.init({apiKey: '281411815254963'}, function(fb) {
+      if ( fb.hasLiked('125289967525962') ) {
+          // User likes the page
+      } else {
+          // User do not like the page
+      }
+});
+
+// API docs & reference
+http://developers.facebook.com/docs/reference/javascript/</code></pre>
+
+
+</dd>
+
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+            
+            <h3 class="subsection-title">Classes</h3>
+            
+            <dl>
+                <dt><a href="LBI.fb.init.html">init</a></dt>
+                <dd></dd>
+            </dl>
+            
+        
+        
+        
+        
+        
+        
+        
+            
+            <h3 class="subsection-title">Methods</h3>
+            
+            <dl><dt>
+    <h4 class="name" id="apiCheck"><span class="type-signature">&lt;static> </span>apiCheck</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <p class="description">
+        Check if FaceBook API has been loaded
+    </p>
+    
+    
+    
+    
+    
+    
+    <dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source"><ul class="dummy"><li>/Applications/MAMP/htdocs/Modules/assets/js/LBI/LBI.fb.js, line 153</li></ul></dd>
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+<div class="param-desc">
+    true/false whether FaceBook API has been loaded
+</div>
+
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">Boolean</span> 
+		
+	</dd>
+</dl>
+
+    
+    
+
+</dd>
+<dt>
+    <h4 class="name" id="createRootElement"><span class="type-signature">&lt;static> </span>createRootElement</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <p class="description">
+        Create Facebook Root element if it doesn't exist
+    </p>
+    
+    
+    
+    
+    
+    
+    <dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source"><ul class="dummy"><li>/Applications/MAMP/htdocs/Modules/assets/js/LBI/LBI.fb.js, line 139</li></ul></dd>
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+<div class="param-desc">
+    N/A
+</div>
+
+
+
+    
+    
+
+</dd>
+<dt>
+    <h4 class="name" id="fbInit"><span class="type-signature">&lt;static> </span>fbInit</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <p class="description">
+        Called when the FaceBook SDK has loaded
+    </p>
+    
+    
+    
+    
+    
+    
+    <dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source"><ul class="dummy"><li>/Applications/MAMP/htdocs/Modules/assets/js/LBI/LBI.fb.js, line 68</li></ul></dd>
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+<div class="param-desc">
+    N/A
+</div>
+
+
+
+    
+    
+
+</dd>
+<dt>
+    <h4 class="name" id="hasLiked"><span class="type-signature">&lt;static> </span>hasLiked</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <p class="description">
+        Check is user has liked the page
+    </p>
+    
+    
+    
+    
+    <h5>Parameters:</h5>
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>page_id</code></td>
+            
+            
+            <td class="type">
+            String
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last">From Facebook</td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    <dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source"><ul class="dummy"><li>/Applications/MAMP/htdocs/Modules/assets/js/LBI/LBI.fb.js, line 97</li></ul></dd>
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+<div class="param-desc">
+    true/false whether user liked the provided page
+</div>
+
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+		<span class="param-type">Boolean</span> 
+		
+	</dd>
+</dl>
+
+    
+    <h5>Example</h5>
+    <pre class="sh_javascript"><code> LBI.fb.hasLiked('125289967525962')</code></pre>
+
+
+</dd>
+<dt>
+    <h4 class="name" id="setSize"><span class="type-signature">&lt;static> </span>setSize</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <p class="description">
+        Set size of application iframe
+    </p>
+    
+    
+    
+    
+    <h5>Parameters:</h5>
+
+<table class="params">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+		
+		<th>Type</th>
+		
+		
+		
+		
+		
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+	
+	
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+            
+            <td class="type">
+            Integer
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"></td>
+        </tr>
+	
+	
+	
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+            
+            <td class="type">
+            Integer
+            </td>
+            
+            
+            
+            
+            
+            <td class="description last"></td>
+        </tr>
+	
+	
+	</tbody>
+</table>
+    
+    <dl class="details">
+    
+        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<dt class="tag-source">Source:</dt>
+	<dd class="tag-source"><ul class="dummy"><li>/Applications/MAMP/htdocs/Modules/assets/js/LBI/LBI.fb.js, line 122</li></ul></dd>
+	
+    
+    
+	
+	
+	
+	
+</dl>
+
+    
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+<div class="param-desc">
+    N/A
+</div>
+
+
+
+    
+    <h5>Example</h5>
+    <pre class="sh_javascript"><code> LBI.fb.setSize(600, 800) | LBI.fb.setSize()</code></pre>
+
+
+</dd>
+</dl>
+            
+        
+        
+        
+        
+        
+    </article>
+    
+    </section>  
+    
+</div>
+
+<nav>
+    <h3>Classes</h3><ul><li><a href="LBI.cookie.html">cookie</a></li><li><a href="LBI.fb.html">fb</a></li><li><a href="LBI.fb.init.html">init</a></li><li><a href="LBI.utils.html">utils</a></li></ul><h3>Global</h3><ul><li><a href="global.html#LBI">LBI</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/micmath/jsdoc">JSDoc 3</a> on Wed Feb 08 2012 09:11:11 GMT+0100 (CET)
+</footer>
+
+<script> sh_highlightDocument(); </script>
+</body>
+</html>

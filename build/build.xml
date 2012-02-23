@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="LBI modules" default="production" basedir="/Applications/MAMP/htdocs/modules">
+
+    <description>LBi - Modules Build Script</description>
+
+    <target name="config" description="Sets global properties for this build">	
+        <!--YUI Compressor location-->
+        <property name="yui.dir" value="${basedir}/lib/yuicompressor/build/yuicompressor-2.4.2.jar"/>
+        <!--Source JS dir-->
+        <property name="src.js.dir" value="${basedir}/public/javascripts" />
+        <!--Source CSS dir-->
+        <property name="src.css.dir" value="${basedir}/public/stylesheets"/>
+        <!--Output dir-->
+        <property name="build.dir" value="build"/>
+    </target>
+    
+	<!-- This is the jsdocs task --> 
+	<!-- Using an Ant task wrapper around the JsDoc Toolkit application -->
+	<!-- See http://code.google.com/p/jsdoc-toolkit-ant-task/ -->
+	<taskdef name="jsdoctoolkit" classname="uk.co.darrenhurley.ant.tasks.JsDocToolkit" classpath="${tool.jsdoc.ant.task};${tool.jsdoc.js.jar}"/>
+	
+    <!--
+    ****************************************************************************
+    * DOCUMENTATION TARGETS [public]
+    ****************************************************************************
+    -->
+    <!-- GENERATE JSDOC DOCUMENTATION BASED ON THE SCRIPTS SPECIFIED BELOW [public] -->		
+    <!-- JSDoc - Keep this public so it can be run independantly -->	
+    <target name="doc.jsdoc" description="Generates JSDocs output">	
+        <echo>Generating JSDocs documentation... </echo>
+		
+        <jsdoctoolkit jsdochome="${basedir}/jsdoc" template="jsdoc" outputdir="/">
+            <!-- Remember to exclude all third party plugins in property definitions -->
+            <fileset dir="${basedir}" /> 
+        </jsdoctoolkit>
+        <echo>JSDoc documentation is now in ${src.vbs}/${src.vbs.version}/${docs.dir}/${out.jsdocs.dir}</echo>
+    </target>	
+</project>
